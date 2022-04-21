@@ -30,7 +30,7 @@ When creating the definition for the database service inside the compose file, y
  - MYSQL_ROOT_PASSWORD
  - MYSQL_DATABASE
  - MYSQL_USER
- -  MYSQL_PASSWORD
+ - MYSQL_PASSWORD
 
 In order for this to work as expected, you need to configure a `docker-compose` environment where both containers (application and database) can connect to each other and send and receive data. Also, as a requirement, you need to make the Data stored in the database persistent, this means the task that were inserted into the database need to be available even if the docker-compose is restarted.
 
@@ -39,7 +39,4 @@ For this, you can use the project dirs:
 - `db-config`
 - `db-data`
 
-to store the database configuration and the actual data inside the application database, please add this dirs inside your docker ignore file, in order to not upload your database files to your repo.
-
-
-
+To store the database configuration and the actual data inside the application database, please add these dirs inside your gitignore file, in order to not upload your database files to your repo.
