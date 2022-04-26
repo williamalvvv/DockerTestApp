@@ -32,6 +32,8 @@ When creating the definition for the database service inside the compose file, y
  - MYSQL_USER
  - MYSQL_PASSWORD
 
+ Please refer to the documentation for the official [MySQL Docker Image](https://hub.docker.com/_/mysql) for more information about the required environment variables an its purposes.
+
 In order for this to work as expected, you need to configure a `docker-compose` environment where both containers (application and database) can connect to each other and send and receive data. Also, as a requirement, you need to make the Data stored in the database persistent, this means the task that were inserted into the database need to be available even if the docker-compose is restarted.
 
 For this, you can use the project dirs:
